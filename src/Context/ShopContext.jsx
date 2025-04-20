@@ -1,7 +1,6 @@
 import React, { createContext, useState } from "react";
 import AllData from "../assets/all_product.js";
 import PopularInWomenData from "../assets/data.js";
-
 export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {

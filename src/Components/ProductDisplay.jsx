@@ -89,7 +89,8 @@ const productDataDisplay = ({ productData }) => {
         {errorMsg && <p style={{ color: "red" }}>{errorMsg}</p>}
         <button
           type="button"
-          className="border-1 rounded-4xl w-[110px] h-[40px] px-1 my-2 bg-[black] text-white text-[13px] font-bold hover:bg-[#444444] transition-all ease-in-out"
+          className="border-1 rounded-4xl w-[110px] h-[40px] px-1 my-2 bg-[black] text-white text-[13px] font-bold hover:bg-[#444444] transition-all ease-in-out
+          active:scale-95 focus:ring-[#444444]"
           onClick={() =>
             handleOnAddCart(
               productData.id,

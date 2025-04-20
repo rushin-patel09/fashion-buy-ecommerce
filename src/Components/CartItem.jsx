@@ -27,7 +27,7 @@ const CartItem = () => {
                   <span className="mr-3">{element.size}</span>
                   <p className="mr-1 font-semibold">Qty:</p>
                   <button
-                    className="mx-1 border w-7 text-center font-semibold"
+                    className="mx-1 border w-7 text-center font-semibold active:scale-80 active:bg-black active:text-white transition-all"
                     onClick={() => plusCartQty(element.id)}
                   >
                     +
@@ -36,7 +36,7 @@ const CartItem = () => {
                     {element.qty}
                   </span>
                   <button
-                    className="mx-1 border w-7 text-center font-semibold"
+                    className="mx-1 border w-7 text-center font-semibold active:scale-80 active:bg-black active:text-white transition-all"
                     onClick={() => minusCartQty(element.id)}
                   >
                     -
@@ -47,7 +47,7 @@ const CartItem = () => {
                 className="mx-2"
                 onClick={() => removeCartItem(element.id)}
               >
-                <img src={Cross} alt="Delete" className="min-w-4 h-4" />
+                <img src={Cross} alt="Delete" className="min-w-4 h-4 active:brightness-200 active:invert-100 active:scale-50 transition-all" />
               </button>
             </div>
           ))
