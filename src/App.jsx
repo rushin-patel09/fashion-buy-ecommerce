@@ -16,6 +16,7 @@ import ProductDisplay from './Components/ProductDisplay.jsx'
 import SignUp from "./Pages/SignUp.jsx";
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   useEffect(() => {
@@ -24,6 +25,11 @@ const App = () => {
 
   return (
     <div data-aos="fade-up">
+      <Toaster position="top-center" toastOptions={{
+          style: {
+            marginTop: '20rem', // this is equivalent to Tailwind's top-20
+          },
+        }} />
       <NavBar />
       <ScrollToTop />
       <Routes>

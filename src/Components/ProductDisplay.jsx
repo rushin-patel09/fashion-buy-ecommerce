@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import Star from "../assets/star_icon.png";
 import Star2 from "../assets/star_dull_icon.png";
 import { ShopContext } from "../Context/ShopContext";
+import toast from "react-hot-toast";
 
 const productDataDisplay = ({ productData }) => {
   const { addToCart } = useContext(ShopContext);
@@ -13,6 +14,7 @@ const productDataDisplay = ({ productData }) => {
       setErrorMsg("Please select a size!");
     } else {
       setErrorMsg("");
+      toast.success("Item added to cart!");
       addToCart(id, name, image, newPrice, inputSize);
     }
   };
