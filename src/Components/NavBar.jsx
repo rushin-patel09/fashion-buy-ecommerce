@@ -6,12 +6,12 @@ import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { ShopContext } from "../Context/ShopContext";
 
 const NavBarList = () => {
-  // const {getTotalCartItems} = useContext(ShopContext)
+  const { getTotalCartItems } = useContext(ShopContext);
   const navlinkActive = ({ isActive }) => {
     return {
       textDecoration: isActive ? "underline" : "none",
-      textDecorationThickness : isActive ? "3px" : "",
-      textUnderlineOffset : isActive ? '10px' : "",
+      textDecorationThickness: isActive ? "3px" : "",
+      textUnderlineOffset: isActive ? "10px" : "",
       fontWeight: isActive ? "700" : "",
     };
   };
@@ -38,7 +38,9 @@ const NavBarList = () => {
       </NavLink>
       <NavLink to="/cart" className="px-5 relative">
         <img src={CartLogo} alt="Cart" width={28} />
-        {/* <span className="absolute top-[-20%] right-2 bg-black text-white rounded-full w-[20px] text-center font-bold text-sm">{getTotalCartItems()}</span> */}
+        <span className="absolute top-[-20%] right-2 bg-black text-white rounded-full min-w-[20px] max-w-max text-center font-bold text-sm px-0.5">
+          {getTotalCartItems()}
+        </span>
       </NavLink>
     </>
   );

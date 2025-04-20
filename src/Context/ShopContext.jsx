@@ -63,7 +63,10 @@ const ShopContextProvider = (props) => {
     );
   };
 
-  console.log(cartItems);
+  const getTotalCartItems = () => {
+    return cartItems.reduce((total, item) => total + item.qty, 0);
+  };
+
   const contextAllValue = {
     AllData,
     PopularInWomenData,
@@ -72,6 +75,7 @@ const ShopContextProvider = (props) => {
     removeCartItem,
     plusCartQty,
     minusCartQty,
+    getTotalCartItems,
   };
 
   return (
