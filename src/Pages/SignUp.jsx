@@ -76,9 +76,9 @@ const SignUp = () => {
           </button>
         </form>
         <p className="m-5">
-          Don't have an account?{" "}
-          <Link to="/signup" className="underline font-bold text-lg">
-            Sign up
+          Already have an account?{" "}
+          <Link to="/login" className="underline font-bold text-lg">
+            Log in
           </Link>
         </p>
       </div>
